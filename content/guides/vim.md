@@ -1,3 +1,6 @@
+Title: Vim
+Date: 2024-04-27
+
 # Search & replace
 ```
 :%s/\<foo\>/bar/gc
