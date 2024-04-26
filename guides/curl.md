@@ -1,1 +1,0 @@
-curl -o OUTPUT URL
