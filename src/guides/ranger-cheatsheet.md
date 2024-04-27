@@ -1,8 +1,8 @@
 # Ranger Cheatsheet
 
 ## General
-Shortcut | Description 
----|---
+| Shortcut | Description |
+|---|---|
 `ranger` | Start Ranger
 `Q` | Quit Ranger
 `R` | Reload current directory

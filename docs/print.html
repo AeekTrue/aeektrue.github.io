@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="guides/ranger-cheatsheet.html"><strong aria-hidden="true">2.</strong> rng</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,6 +176,85 @@
                     <main>
                         <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
 <p>Kek</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ranger-cheatsheet"><a class="header" href="#ranger-cheatsheet">Ranger Cheatsheet</a></h1>
+<h2 id="general"><a class="header" href="#general">General</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>ranger</code></td><td>Start Ranger</td></tr>
+<tr><td><code>Q</code></td><td>Quit Ranger</td></tr>
+<tr><td><code>R</code></td><td>Reload current directory</td></tr>
+<tr><td><code>?</code></td><td>Ranger Manpages / Shortcuts</td></tr>
+</tbody></table>
+</div>
+<h2 id="movement"><a class="header" href="#movement">Movement</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>k</code></td><td>up</td></tr>
+<tr><td><code>j</code></td><td>down</td></tr>
+<tr><td><code>h</code></td><td>parent directory</td></tr>
+<tr><td><code>l</code></td><td>subdirectory</td></tr>
+<tr><td><code>gg</code></td><td>go to top of list</td></tr>
+<tr><td><code>G</code></td><td>go t bottom of list</td></tr>
+<tr><td><code>J</code></td><td>half page down</td></tr>
+<tr><td><code>K</code></td><td>half page up</td></tr>
+<tr><td><code>H</code></td><td>History Back</td></tr>
+<tr><td><code>L</code></td><td>History Forward</td></tr>
+<tr><td><code>~</code></td><td>Switch the view</td></tr>
+</tbody></table>
+</div>
+<h2 id="file-operations"><a class="header" href="#file-operations">File Operations</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;Enter&gt;</code></td><td>Open</td></tr>
+<tr><td><code>r</code></td><td>open file with</td></tr>
+<tr><td><code>z</code></td><td>toggle settings</td></tr>
+<tr><td><code>o</code></td><td>change sort order</td></tr>
+<tr><td><code>zh</code></td><td>view hidden files</td></tr>
+<tr><td><code>cw</code></td><td>rename current file</td></tr>
+<tr><td><code>yy</code></td><td>yank / copy</td></tr>
+<tr><td><code>dd</code></td><td>cut</td></tr>
+<tr><td><code>pp</code></td><td>paste</td></tr>
+<tr><td><code>/</code></td><td>search for files <code>:search</code></td></tr>
+<tr><td><code>n</code></td><td>next match</td></tr>
+<tr><td><code>N</code></td><td>prev match</td></tr>
+<tr><td><code>&lt;delete&gt;</code></td><td>Delete</td></tr>
+</tbody></table>
+</div>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>:</code></td><td>Execute Range Command</td></tr>
+<tr><td><code>!</code></td><td>Execute Shell Command</td></tr>
+<tr><td><code>chmod</code></td><td>Change file Permissions</td></tr>
+<tr><td><code>du</code></td><td>Disk Usage Current Directory</td></tr>
+<tr><td><code>S</code></td><td>Run the terminal in your current ranger window (exit to go back to ranger)</td></tr>
+</tbody></table>
+</div>
+<h2 id="tabs"><a class="header" href="#tabs">Tabs</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>C-n</code></td><td>Create new tab</td></tr>
+<tr><td><code>C-w</code></td><td>Close current tab</td></tr>
+<tr><td>tab</td><td>Next tab</td></tr>
+<tr><td>shift + tab</td><td>Previous tab</td></tr>
+<tr><td>alt + [n]</td><td>goto / create [n] tab</td></tr>
+</tbody></table>
+</div>
+<h2 id="file-substituting"><a class="header" href="#file-substituting">File substituting</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>%f</code></td><td>Substitute highlighted file</td></tr>
+<tr><td><code>%d</code></td><td>Substitute current directory</td></tr>
+<tr><td><code>%s</code></td><td>Substitute currently selected files</td></tr>
+<tr><td><code>%t</code></td><td>Substitute currently tagged files</td></tr>
+</tbody></table>
+</div>
+<h3 id="example-for-substitution"><a class="header" href="#example-for-substitution">Example for substitution</a></h3>
+<p><code>:bulkrename %s</code></p>
+<h2 id="marker"><a class="header" href="#marker">Marker</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>m  + &lt;letter&gt;</code></td><td>Create Marker</td></tr>
+<tr><td><code>um  + &lt;letter&gt;</code></td><td>Delete Marker</td></tr>
+<tr><td><code>'  + &lt;letter&gt;</code></td><td>Go to Marker</td></tr>
+<tr><td><code>t</code></td><td>tag a file with an *</td></tr>
+<tr><td><code>t"&lt;any&gt;</code></td><td>tag a file with your desired mark</td></tr>
+</tbody></table>
+</div>
+<p><em>thx to the comments section for additional shortcuts! post your suggestions there!</em></p>
 
                     </main>
 
