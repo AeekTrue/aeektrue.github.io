@@ -173,13 +173,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>poetry new
+                        <pre><code class="language-shell">poetry new
 poetry env use python3.12
 poetry env info
 poetry shell
 poetry run COMMAND
 poetry show --tree
-portry show --lateset</p>
+portry show --lateset
+</code></pre>
+<pre><code>[tool.poetry.scripts]
+somecmd = "tests.main:func"
+</code></pre>
 
                     </main>
 

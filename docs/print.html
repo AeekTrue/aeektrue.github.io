@@ -255,13 +255,17 @@
 </tbody></table>
 </div>
 <p><em>thx to the comments section for additional shortcuts! post your suggestions there!</em></p>
-<div style="break-before: page; page-break-before: always;"></div><p>poetry new
+<div style="break-before: page; page-break-before: always;"></div><pre><code class="language-shell">poetry new
 poetry env use python3.12
 poetry env info
 poetry shell
 poetry run COMMAND
 poetry show --tree
-portry show --lateset</p>
+portry show --lateset
+</code></pre>
+<pre><code>[tool.poetry.scripts]
+somecmd = "tests.main:func"
+</code></pre>
 
                     </main>
 
