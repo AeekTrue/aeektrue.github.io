@@ -1,2 +1,2 @@
 # Welcome
-Here are my notes about programming and life.
+Storage of my notes about programming and life.

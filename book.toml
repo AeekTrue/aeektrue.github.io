@@ -6,7 +6,10 @@ src = "src"
 title = "Aeek's memories"
 
 [output.html]
-no-section-label = true 
+no-section-label = true
 
 [output.html.print]
 enable = false
+
+[build]
+build-dir = "docs"
