@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html">Chapter 1</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">rng</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html">poetry</a></li><li class="chapter-item expanded "><a href="../guides/find.html" class="active">find</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/grep.html">grep</a></li><li class="chapter-item expanded "><a href="../guides/find.html" class="active">find</a></li><li class="chapter-item expanded "><a href="../guides/zip.html">zip</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html">poetry</a></li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">ranger</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -171,12 +171,13 @@
                     <main>
                         <p><code>find /dir/path -name filename.txt</code></p>
 <p>**Filters: **</p>
-<p><code>-iname</code>  case insensetive</p>
-<p><code>-type f | d | l</code></p>
-<p><code>-perm</code></p>
-<p><code>-empty</code></p>
-<p><code>-user</code></p>
-<p><code>-group</code></p>
+<pre><code class="language-sh">-iname # case insensetive
+-type # f | d | l
+-perm
+-empty
+-user
+-group
+</code></pre>
 <p>To find all the files which are modified more than <strong>50</strong> days back and less than <strong>100</strong> days.</p>
 <p><code>find / -mtime +50 –mtime -100</code></p>
 
@@ -184,10 +185,13 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guides/poetry.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/grep.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="../guides/zip.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -195,10 +199,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guides/poetry.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/grep.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="../guides/zip.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
