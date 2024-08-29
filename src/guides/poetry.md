@@ -8,7 +8,7 @@ poetry show --tree
 portry show --lateset
 ```
 
-```
+``` toml
 [tool.poetry.scripts]
 somecmd = "tests.main:func"
 ```
