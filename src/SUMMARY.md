@@ -1,7 +1,9 @@
 # Summary
-- [Chapter 1](./chapter_1.md)
+- [Welcome](./welcome.md)
 
 # Guides
-1. [rng](./guides/ranger-cheatsheet.md)
-1. [poetry](./guides/poetry.md)
-1. [find](./guides/find.md)
+- [grep](./guides/grep.md)
+- [find](./guides/find.md)
+- [zip](./guides/zip.md)
+- [poetry](./guides/poetry.md)
+- [ranger](./guides/ranger-cheatsheet.md)
