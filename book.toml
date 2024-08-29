@@ -5,6 +5,8 @@ multilingual = false
 src = "src"
 title = "Aeek's memories"
 
+[output.html]
+no-section-label = true 
+
 [output.html.print]
 enable = false
-no-section-label = true 
