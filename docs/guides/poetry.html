@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/grep.html">grep</a></li><li class="chapter-item expanded "><a href="../guides/find.html">find</a></li><li class="chapter-item expanded "><a href="../guides/zip.html">zip</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html" class="active">poetry</a></li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">ranger</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/grep.html">grep</a></li><li class="chapter-item expanded "><a href="../guides/find.html">find</a></li><li class="chapter-item expanded "><a href="../guides/zip.html">zip</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html" class="active">poetry</a></li><li class="chapter-item expanded "><a href="../guides/gpg.html">gpg</a></li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">ranger</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -169,7 +169,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <pre><code class="language-shell">poetry new
+                        <h1 id="poetry"><a class="header" href="#poetry">Poetry</a></h1>
+<pre><code class="language-shell">poetry new
 poetry env use python3.12
 poetry env info
 poetry shell
@@ -177,8 +178,12 @@ poetry run COMMAND
 poetry show --tree
 portry show --lateset
 </code></pre>
+<p>Add custom command:</p>
 <pre><code class="language-toml">[tool.poetry.scripts]
 somecmd = "tests.main:func"
+</code></pre>
+<p>Then</p>
+<pre><code class="language-shell">poetry install
 </code></pre>
 
                     </main>
@@ -189,7 +194,7 @@ somecmd = "tests.main:func"
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../guides/ranger-cheatsheet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../guides/gpg.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -203,7 +208,7 @@ somecmd = "tests.main:func"
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../guides/ranger-cheatsheet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../guides/gpg.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

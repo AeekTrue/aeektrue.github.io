@@ -1,0 +1,3 @@
+```python
+plt.axis('off')
+```

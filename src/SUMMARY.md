@@ -6,4 +6,5 @@
 - [find](./guides/find.md)
 - [zip](./guides/zip.md)
 - [poetry](./guides/poetry.md)
+- [gpg](./guides/gpg.md)
 - [ranger](./guides/ranger-cheatsheet.md)
