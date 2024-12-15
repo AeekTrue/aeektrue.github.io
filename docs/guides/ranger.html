@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>poetry - Aeek&#x27;s memories</title>
+        <title>ranger - Aeek&#x27;s memories</title>
 
 
         <!-- Custom HTML head -->
@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/grep.html">grep</a></li><li class="chapter-item expanded "><a href="../guides/find.html">find</a></li><li class="chapter-item expanded "><a href="../guides/zip.html">zip</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html" class="active">poetry</a></li><li class="chapter-item expanded "><a href="../guides/gpg.html">gpg</a></li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">ranger-cheatsheet</a></li><li class="chapter-item expanded "><a href="../guides/ranger.html">ranger</a></li><li class="chapter-item expanded "><a href="../guides/dearpygui.html">dearpygui</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="../guides/grep.html">grep</a></li><li class="chapter-item expanded "><a href="../guides/find.html">find</a></li><li class="chapter-item expanded "><a href="../guides/zip.html">zip</a></li><li class="chapter-item expanded "><a href="../guides/poetry.html">poetry</a></li><li class="chapter-item expanded "><a href="../guides/gpg.html">gpg</a></li><li class="chapter-item expanded "><a href="../guides/ranger-cheatsheet.html">ranger-cheatsheet</a></li><li class="chapter-item expanded "><a href="../guides/ranger.html" class="active">ranger</a></li><li class="chapter-item expanded "><a href="../guides/dearpygui.html">dearpygui</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -169,32 +169,73 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="poetry"><a class="header" href="#poetry">Poetry</a></h1>
-<pre><code class="language-shell">poetry new
-poetry env use python3.12
-poetry env info
-poetry shell
-poetry run COMMAND
-poetry show --tree
-portry show --lateset
-</code></pre>
-<p>Add custom command:</p>
-<pre><code class="language-toml">[tool.poetry.scripts]
-somecmd = "tests.main:func"
-</code></pre>
-<p>Then</p>
-<pre><code class="language-shell">poetry install
+                        <p>https://github.com/ranger/ranger/wiki/Official-user-guide</p>
+<p>Config: <code>~/config/ranger/rc.conf</code></p>
+<p>Flags are used in the commands <code>:open_with</code> and <code>:shell</code>.
+<code>f</code>   Fork the process.  (Run in background)
+<code>c</code>   Run the current file only, instead of the selection
+<code>r</code>   Run application with root privilege (requires sudo)
+<code>t</code>   Run application in a new terminal window</p>
+<p>There are some additional flags that can currently be used only in the <code>shell</code> command:
+(for example ":shell -w df")
+<code>p</code>   Redirect output to the pager
+<code>s</code>   Silent mode.  Output will be discarded.
+<code>w</code>   Wait for an Enter-press when the process is done</p>
+<h1 id="my-config"><a class="header" href="#my-config">My config</a></h1>
+<pre><code>setlocal path=~/Downloads sort mtime
+
+
+# ALIASES
+alias tmux_neww_here eval os.system('tmux neww -c '+ str(fm.fm.thisdir)) if os.getenv('TMUX') else 0
+#alias tmux_split_here eval os.system('tmux split-window -v -p66 -c ' + str(fm.fm.thisdir)) if os.getenv('TMUX') else 0
+alias tmux_split_here eval os.system('tmux split-window -v -p66') if os.getenv('TMUX') else 0
+alias tmux_python3 console shell tmux split-window -v -p66 python3 %f%space
+
+alias make shell -w make
+alias vim shell nvim
+alias zed shell zed .
+
+# MAPS
+## Move bookmarks from m to b
+unmap m&lt;any&gt; m&lt;bg&gt; um&lt;any&gt; um&lt;bg&gt;
+map b&lt;any&gt;  set_bookmark %any
+map ub&lt;any&gt; unset_bookmark %any
+map b&lt;bg&gt;   draw_bookmarks
+copymap b&lt;bg&gt;  ub&lt;bg&gt; `&lt;bg&gt; '&lt;bg&gt;
+
+
+## Swap default maps gl &lt;-&gt; gL
+map gl cd -r %f
+map gL cd -r .
+
+## Custom commands
+### Tmux
+map ms tmux_split_here
+map mc tmux_neww_here
+map mp tmux_python3
+map ml chain tmux_neww_here; shell tmux splitw -h nvim %f; shell tmux renamew %d
+
+map mk console mkcd%space
+map me&lt;any&gt; echo %any_path
+
+map m. source /home/aeek/.config/ranger/rc.conf
+
+map uz console -p15 shell unzip -d  "%f"
+map s console shell -w%space
+map yi shell cat %f | xclip -selection clipboard -target image/png -i
+map zed zed
+map zip console -p10 shell zip  %%s
 </code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guides/zip.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/ranger-cheatsheet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../guides/gpg.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../guides/dearpygui.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -204,11 +245,11 @@ somecmd = "tests.main:func"
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guides/zip.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/ranger-cheatsheet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../guides/gpg.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../guides/dearpygui.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

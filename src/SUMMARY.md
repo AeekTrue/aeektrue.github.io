@@ -7,6 +7,7 @@
 - [zip](./guides/zip.md)
 - [poetry](./guides/poetry.md)
 - [gpg](./guides/gpg.md)
-- [ranger](./guides/ranger-cheatsheet.md)
+- [ranger-cheatsheet](./guides/ranger-cheatsheet.md)
+- [ranger](./guides/ranger.md)
 - [dearpygui](./guides/dearpygui.md)
 
