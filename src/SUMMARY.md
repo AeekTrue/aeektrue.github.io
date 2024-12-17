@@ -10,4 +10,4 @@
 - [ranger-cheatsheet](./guides/ranger-cheatsheet.md)
 - [ranger](./guides/ranger.md)
 - [dearpygui](./guides/dearpygui.md)
-
+- [mathjax](./guides/mathjax.md)
